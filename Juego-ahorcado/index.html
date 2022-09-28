@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <main>
+      <header>
+        <div>
+            <img class="imagen-logo" src="img/logo2.png" alt="logo" height="120px" width="120px">
+        </div>
+        <div class="container-titulo">
+            <h1>Juego del Ahorcado</h1>
+        </div>
+      </header>
+
+      <!--Buttons-->
+      <div id="div-desaparece" class="botones-home">
+        <a href="#forca"><input class="btn-iniciar" type="submit" value="Iniciar Juego" id="iniciar-juego"  >
+        </a>
+        <button class="btn-palabra" id="nueva-palabra" onclick="ensenarPantallaDeAgregarPalabra()">Agregar Palabra</button> 
+      </div>
+
+    
+      <div id="agregar-palabra" class="palabra-nueva">
+        <input class="text-input" type="text" id="input-nueva-palabra"  maxlength="8" placeholder="Escriba una palabra">
+        <div class="form-group">
+          <img src="img/!.png" class="img-alerta">
+          <label for="input-texto"> Máx. 8 caracteres</label>
+        </div>
+        <div class="botones-div">
+          <input class="btn-violeta" type="submit" value="Guardar y empezar" id="btn-guardar">
+          <input class="btn-blanco" type="submit" value="Cancelar" id="btn-cancelar">
+        </div> 
+      </div>
+    <div id="aparece-ahorcado" class="canvas">
+        <canvas id="horca" width="1200px" height="860px"></canvas>
+        <div class="subrayado">
+
+        </div>
+        <div class="botones-div-canvas">
+          <input class="btn-violeta" type="submit" value="Nuevo Juego" id="btn-nuevo-juego">
+          <input class="btn-blanco" type="submit" value="Salir" id="btn-salir">
+        
+        </div>
+        
+    </div>
+    </main>
+
+
+
+    <footer class="pie-pagina">
+        <p>Created by Luciana Ledesma</p>
+        <a href="https://github.com/flucianaledesma"><img src="img/github.png" alt="logogh" width="20" height="20"></a>
+
+    </footer>
+
+    <!--Javascript-->
+    <script src="horca.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
